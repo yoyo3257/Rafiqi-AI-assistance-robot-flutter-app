@@ -1,6 +1,6 @@
-# 🤖 ACSAR (Rafiqi) – AI Customer Service Assistant Robot
+# 🤖 Rafiqi – AI Customer Service Assistant Robot
 
-ACSAR (Rafiqi) is my **graduation project**, a multilingual AI-powered customer service robot designed to enhance museum experiences.
+Rafiqi is my **graduation project**, a multilingual AI-powered customer service robot designed to enhance museum experiences.
 It combines **AI models, Flutter mobile app, and Raspberry Pi hardware** to provide a smart, interactive assistant.
 
 ---
