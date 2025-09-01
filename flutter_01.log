@@ -1,0 +1,103 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --no-color run --machine --track-widget-creation --device-id=emulator-5554 --start-paused --dart-define=flutter.inspector.structuredErrors=true lib\main.dart
+
+## exception
+
+ProcessPackageException: ProcessException: Failed to find "C:\src\flutter\bin\cache\dart-sdk\bin\dartaotruntime.exe" in the search path.
+  Command: C:\src\flutter\bin\cache\dart-sdk\bin\dartaotruntime.exe 
+
+```
+#0      LocalProcessManager.start (package:process/src/interface/local_process_manager.dart:56:7)
+#1      ErrorHandlingProcessManager.start.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:699:24)
+#2      _run (package:flutter_tools/src/base/error_handling_io.dart:569:20)
+#3      ErrorHandlingProcessManager.start (package:flutter_tools/src/base/error_handling_io.dart:698:12)
+#4      DefaultResidentCompiler._compile (package:flutter_tools/src/compile.dart:875:37)
+#5      DefaultResidentCompiler._recompile (package:flutter_tools/src/compile.dart:735:14)
+#6      _RecompileRequest._run (package:flutter_tools/src/compile.dart:421:16)
+#7      _CompilationRequest.run (package:flutter_tools/src/compile.dart:395:30)
+#8      DefaultResidentCompiler._handleCompilationRequest (package:flutter_tools/src/compile.dart:781:23)
+#9      _rootRunUnary (dart:async/zone.dart:1407:47)
+#10     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#11     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#12     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:365:11)
+#13     _DelayedData.perform (dart:async/stream_impl.dart:541:14)
+#14     _PendingEvents.handleNext (dart:async/stream_impl.dart:646:11)
+#15     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:617:7)
+#16     _rootRun (dart:async/zone.dart:1391:47)
+#17     _CustomZone.run (dart:async/zone.dart:1301:19)
+#18     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#19     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#20     _rootRun (dart:async/zone.dart:1399:13)
+#21     _CustomZone.run (dart:async/zone.dart:1301:19)
+#22     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#23     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#24     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
+#25     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+#26     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:118:13)
+#27     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:185:5)
+```
+
+## flutter doctor
+
+```
+[!] Flutter (Channel stable, 3.24.3, on Microsoft Windows [Version 10.0.26100.3323], locale en-US)
+    • Flutter version 3.24.3 on channel stable at C:\src\flutter
+    ! Warning: `dart` on your path resolves to C:\Program Files\Dart\dart-sdk\bin\dart.exe, which is not inside your current Flutter SDK checkout at C:\src\flutter. Consider adding C:\src\flutter\bin to the front of your path.
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 2663184aa7 (6 months ago), 2024-09-11 16:27:48 -0500
+    • Engine revision 36335019a8
+    • Dart version 3.5.3
+    • DevTools version 2.37.3
+    • If those were intentional, you can disregard the above warnings; however it is recommended to use "git" directly to perform update checks and upgrades.
+
+[✓] Windows Version (Installed version of Windows is version 10 or higher)
+
+[!] Android toolchain - develop for Android devices (Android SDK version 35.0.0)
+    • Android SDK at C:/Users/Dell/AppData/Local/Android/Sdk
+    • Platform android-35, build-tools 35.0.0
+    • ANDROID_HOME = C:/Users/Dell/AppData/Local/Android/Sdk
+    ✗ Android SDK file not found: C:/Users/Dell/AppData/Local/Android/Sdk\build-tools\35.0.0\aapt.
+    • Try re-installing or updating your Android SDK,
+      visit https://flutter.dev/to/windows-android-setup for detailed instructions.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[!] Visual Studio - develop Windows apps (Visual Studio Build Tools 2022 17.11.5)
+    • Visual Studio at C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools
+    • Visual Studio Build Tools 2022 version 17.11.35327.3
+    • Windows 10 SDK version 10.0.22000.0
+    ✗ Visual Studio is missing necessary components. Please re-run the Visual Studio installer for the "Desktop development with C++" workload, and include these components:
+        MSVC v142 - VS 2019 C++ x64/x86 build tools
+         - If there are multiple build tool versions available, install the latest
+        C++ CMake tools for Windows
+        Windows 10 SDK
+
+[!] Android Studio (version 2024.1)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    ✗ Unable to find bundled Java version.
+    • Try updating or re-installing Android Studio.
+
+[✓] Connected device (4 available)
+    • sdk gphone64 x86 64 (mobile) • emulator-5554 • android-x64    • Android 15 (API 35) (emulator)
+    • Windows (desktop)            • windows       • windows-x64    • Microsoft Windows [Version 10.0.26100.3323]
+    • Chrome (web)                 • chrome        • web-javascript • Google Chrome 133.0.6943.143
+    • Edge (web)                   • edge          • web-javascript • Microsoft Edge 133.0.3065.82
+
+[!] Network resources
+    ✗ A network error occurred while checking "https://pub.dev/": Failed host lookup: 'pub.dev'
+    ✗ A network error occurred while checking "https://storage.googleapis.com/": Failed host lookup: 'storage.googleapis.com'
+    ✗ A network error occurred while checking "https://maven.google.com/": Failed host lookup: 'maven.google.com'
+    ✗ A network error occurred while checking "https://cocoapods.org/": Failed host lookup: 'cocoapods.org'
+    ✗ A network error occurred while checking "https://github.com/": Failed host lookup: 'github.com'
+
+! Doctor found issues in 5 categories.
+```

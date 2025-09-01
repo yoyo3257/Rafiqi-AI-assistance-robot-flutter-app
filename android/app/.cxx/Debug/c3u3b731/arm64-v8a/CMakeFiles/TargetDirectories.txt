@@ -1,0 +1,2 @@
+D:/yasmin/programing files/andriod studio/rafiqi/android/app/.cxx/Debug/c3u3b731/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/yasmin/programing files/andriod studio/rafiqi/android/app/.cxx/Debug/c3u3b731/arm64-v8a/CMakeFiles/rebuild_cache.dir
