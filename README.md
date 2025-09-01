@@ -10,7 +10,6 @@ It combines **AI models, Flutter mobile app, and Raspberry Pi hardware** to prov
 * 🗣️ **Voice Interaction** – Speak naturally with the assistant.
 * 💬 **AI Chatbot** – Get instant responses to your questions.
 * 🗺️ **Smart Map Navigation** – Interactive museum guide with directions.
-* 🎭 **Animated Robot Face** – Friendly UI with an Egyptian museum theme.
 * 🌍 **Multilingual Support** – Supports multiple languages for inclusivity.
 
 ---
